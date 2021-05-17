@@ -1,7 +1,7 @@
 board = [' ' for x in range(10)]
 
 
-def insertletter(letter, pos):
+def forletter(letter, pos):
     board[pos] = letter
 
 
@@ -14,7 +14,7 @@ def userturn():
             if move > 0 and move < 10:
                 if isposempty(move):
                     run = False
-                    insertletter('X', move)
+                    forletter('X', move)
                 else:
                     print('Sorry, this space is filled!')
             else:
@@ -106,7 +106,7 @@ def main():
             if move == 0:
                 print('Tie game!')
             else:
-                insertletter('O', move)
+                forletter('O', move)
                 print('Computer placed \'O\' at position', move, ';')
                 printgrid(board)
         else:
